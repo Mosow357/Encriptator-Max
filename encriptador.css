@@ -134,7 +134,11 @@ h5:hover{
     .botones {
       flex-direction: column;
     }
-  }
+}
+.botones {
+    margin: 2% 2%;
+}
+
   
   
   
