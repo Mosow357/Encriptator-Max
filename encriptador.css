@@ -1,4 +1,5 @@
 .body{
+    height: 100%;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     height : 100vh;
@@ -40,6 +41,169 @@ h1:hover{
     text-shadow: 0px 0px 12px rgb(243, 242, 239);
     transition: 1s;
 }
+.navbar__links:hover {
+    color: lightsteelblue;
+    transition: all 1s ease;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  
+  .logo{
+    font-size: 4rem;
+    text-decoration: none;
+    color: aliceblue;  
+  }
+  .logo:hover{
+      color: cornflowerblue;
+      text-shadow: 7px 7px 7px aliceblue;
+      transition: 1s;
+      
+  }
+ 
+
+  nav{
+      display: flex;
+      align-items:center;
+      justify-content: space-around;
+      min-height:8vh;
+      background-color: #0d0e0c;
+  }
+  
+
+  .ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .ham span{
+        background-color: transparent;
+        display:block;
+        height:3px;
+        width: 28px;
+        margin:10px auto;
+        border-radius:2px;    
+    }
+  .enlaces-menu{
+      display:flex;
+      padding:0;
+  }
+  .enlaces-menu li{
+      padding: 20px 20px;
+      list-style-type: none;
+      transition: 0.3s;
+  }
+
+  .enlaces-menu li a{
+      text-decoration:none;
+      font-size: 1.8rem;
+      color:#f3f3f3;
+      font-weight:600;
+  }
+  
+
+
+/* DISPOSITIVOS MOVILES */
+
+  @media (max-width:768px) {
+    body{
+      overflow:hidden;
+    }
+      .ham{
+          display:block;
+          cursor:pointer;
+          position: absolute;
+          color: aliceblue; 
+          top:15px;
+          right:25px;
+          transition: 0.2s  0.1s; 
+  
+      }
+      span{
+          color: aliceblue;
+      }
+   
+      
+      nav{
+          flex-direction:column;
+          align-items: flex-start;
+          padding-top: 25px;
+          padding-bottom: 25px;
+      }
+
+      .logo{
+        padding-left:25px;
+        
+      }
+
+      .enlaces-menu{
+        
+          flex-direction:column;
+          justify-content: space-around;
+          align-items:center;
+          height: 92vh;         
+          margin:0;
+          padding:0; 
+          display:none;
+          opacity:0;
+          transition: opacity 5s ease-out;
+          width:100%;
+      
+         
+      }
+      .enlaces-menu li{
+        text-align:center;
+        width:100%;
+        padding:20px;    
+    }
+    .button{
+        width: 7rem;
+        height: 4rem;
+        background-color: #0d0e0c;
+    }
+   
+  
+ }
+
+/* Animaciones */
+  
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .enlaces-menu.activado{
+      display:flex; 
+      animation: muestraMenu 350ms ease-in-out both;
+  }
+
+  .br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+  
+  .br-2.animado{
+    opacity: 0;
+  }
+  .br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+  .ham.girar:hover{
+     transform:rotate(360deg);
+  }
 
 .container{
     display: flex;
@@ -94,23 +258,8 @@ h5:hover{
     text-shadow: 0px 0px 5px rgb(246, 245, 242);
     transition: 1s;
 }
-.me{
-    padding-left: 5px;
-    animation-name: titulo;
-    animation-duration: 5s;
-    animation-delay: 3s;
-    animation-iteration-count: 8;
-    float: right;
-}
-.logo{
-    color: rgb(241, 237, 235);
-    width: 7%;
-}
 
-.logo:hover{
-    
-    text-shadow: 0px 0px 5px rgb(221, 190, 90);
-}
+
 .textos{
     display: flex;
     height: 38%;
@@ -139,7 +288,36 @@ h5:hover{
     margin: 2% 2%;
     display:contents;
 }
-
+footer{
+    height: 5rem;
+    text-align: center;
+    margin-bottom: 8px;
+    background-color: #131313;
+      
+}
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+    padding: 15px 100px 15px 100px;
+    flex-basis:20%;
+    box-sizing: border-box;
+}
+.socialIcon{
+    font-size: 30px;
+    color: #e4e1f0;
+}
+.socialIcon:hover {
+    color: #99c5ff;
+    
+    
+    transform: scale(1.3) rotate(360deg);
+    transition: 1s; 
+}
 
   
   
